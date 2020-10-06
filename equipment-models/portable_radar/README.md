@@ -14,7 +14,18 @@ Returns a dictionary:
 - **Function**<**Model**> *clone*(*void*)
 > returns a clone of the model with all parts unanchored
 
-*MODEL IS WELDED*
+## notes
+Model properties:
+- welded
+- PrimaryPart is set - base
+
+Part properties:
+- anchored
+- **NOT** massless
+- do not collide, **base has CanCollide enabled**
+
+Other notes:
+- has BodyGyro to constantly make model face up
 
 ## projects i used this in
 > as of 20.10.06
