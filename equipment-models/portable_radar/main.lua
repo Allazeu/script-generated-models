@@ -1,5 +1,4 @@
 local Instance = loadstring(game:HttpGet("https://raw.githubusercontent.com/Allazeu/api/master/Lua/Roblox/BetterInstance.lua"))();
-
 local model = Instance.new('Model');
 
 local pv1 = Instance.new('Part', model, {
@@ -295,6 +294,8 @@ Instance.new('BodyGyro', base, {
 	MaxTorque = Vector3.new(400000, 0, 400000),
 	P = 30000,
 });
+
+model.PrimaryPart = base;
 
 for _, v in next, model:GetChildren() do
 	if (v ~= base) then
