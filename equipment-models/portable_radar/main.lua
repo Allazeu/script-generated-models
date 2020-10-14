@@ -316,8 +316,10 @@ local data = {
 
 function data:clone()
 	local new = model:Clone();
-	for _, v in next, new do
-		v.Anchored = false;
+	for _, v in next, new:GetDescendants() do
+		if (v:IsA('BasePart')) then
+			v.Anchored = false;
+		end
 	end
 	
 	return new;
